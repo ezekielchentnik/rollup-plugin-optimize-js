@@ -5,9 +5,9 @@
 
 Run your [Rollup](https://github.com/rollup/rollup) bundles through [optimize-js](https://github.com/nolanlawson/optimize-js) post bundle generate.
 
-This will optimize a JavaScript file for faster initial execution and parsing, by wrapping all immediately-invoked functions or likely-to-be-invoked functions in parentheses.  Rollup by default does similar optimization, however, this will apply it to all immediately-invoked functions or likely-to-be-invoked functions in parentheses, and/or handle situations where minification undo's previous optimizations.
+This will optimize a JavaScript file for faster initial execution and parsing, by wrapping all immediately-invoked functions or likely-to-be-invoked functions in parentheses.  By default [Rollup](https://github.com/rollup/rollup) does similar optimizations, however, this will apply it to all functions, and/or handle situations where minifying undo's previous optimizations.
 
-See (optimize-js)[https://github.com/nolanlawson/optimize-js#javascript-api] for more info and details on when it makes sense for this optimization.
+See [optimize-js](https://github.com/nolanlawson/optimize-js#javascript-api) for more info and details on when it makes sense for this optimization.
 
 #### [Demo](https://github.com/ezekielchentnik/preact-pwa)
 
