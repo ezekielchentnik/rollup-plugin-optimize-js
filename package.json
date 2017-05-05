@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-optimize-js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Rollup plugin to easily run your bundles through optimize-js, post build",
   "main": "dist/rollup-plugin-optimize-js.js",
   "module": "dist/rollup-plugin-optimize-js.es.js",
