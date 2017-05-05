@@ -1,7 +1,7 @@
 # rollup-plugin-optimize-js
 
 [![NPM](https://img.shields.io/npm/v/rollup-plugin-optimize-js.svg)](https://www.npmjs.com/package/rollup-plugin-optimize-js)
-[![Travis](https://travis-ci.org/gufsky/rollup-plugin-optimize-js.svg?branch=master)](https://travis-ci.org/gufsky/rollup-plugin-optimize-js)
+[![Travis](https://travis-ci.org/ezekielchentnik/rollup-plugin-optimize-js.svg?branch=master)](https://travis-ci.org/gufsky/rollup-plugin-optimize-js)
 
 Run your [Rollup](https://github.com/rollup/rollup) bundles through [optimize-js](https://github.com/nolanlawson/optimize-js) post minifying.
 
