@@ -3,9 +3,9 @@
 [![NPM](https://img.shields.io/npm/v/rollup-plugin-optimize-js.svg)](https://www.npmjs.com/package/rollup-plugin-optimize-js)
 [![Travis](https://travis-ci.org/gufsky/rollup-plugin-optimize-js.svg?branch=master)](https://travis-ci.org/gufsky/rollup-plugin-optimize-js)
 
-Run your [Rollup](https://github.com/rollup/rollup) bundles through [optimize-js](https://github.com/nolanlawson/optimize-js) post bundle generate.
+Run your [Rollup](https://github.com/rollup/rollup) bundles through [optimize-js](https://github.com/nolanlawson/optimize-js) post minifying.
 
-This will optimize a JavaScript file for faster initial execution and parsing, by wrapping all immediately-invoked functions or likely-to-be-invoked functions in parentheses.  By default [Rollup](https://github.com/rollup/rollup) does similar optimizations, however, this will apply it to all functions, and/or handle situations where minifying undo's previous optimizations.
+This will optimize a JavaScript file for faster initial execution and parsing, by wrapping all immediately-invoked functions or likely-to-be-invoked functions in parentheses.  By default [Rollup](https://github.com/rollup/rollup) does similar optimizations, however, this will apply the optimization to all functions, and/or handle situations where minifying your bundle undos previous optimizations.
 
 See [optimize-js](https://github.com/nolanlawson/optimize-js#javascript-api) for more info and details on when it makes sense for this optimization.
 
@@ -21,7 +21,7 @@ Install
 npm i rollup-plugin-optimize-js --save
 ```
 
-Use plugin in your `rollup.config.js`
+Use plugin in your `rollup.config.js`, be sure to add after uglify
 
 ```js
 const buble = require('rollup-plugin-buble')
@@ -34,11 +34,11 @@ module.exports = {
     buble(),
     uglify({
       "compress": {
-        "negate_iife": false,
+        "negate_iife": false, // not required, similar optimization
         // omitted for brevity
       }
-    })
-    optimizeJs()
+    }),
+    optimizeJs() // occurs after uglify
   ],
   targets: [
     {
